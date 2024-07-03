@@ -1,0 +1,27 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+    <TargetFramework>net8.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+	  <PreserveCompilationContext>true</PreserveCompilationContext>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="EmbeddedTemplates\EmbeddedTemplate.cshtml" />
+    <None Remove="EmbeddedTemplates\EmbeddedTemplateWithPartialView.cshtml" />
+    <None Remove="EmbeddedTemplates\_PartialView.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Include="EmbeddedTemplates\EmbeddedTemplateWithPartialView.cshtml" />
+    <EmbeddedResource Include="EmbeddedTemplates\_PartialView.cshtml" />
+    <EmbeddedResource Include="EmbeddedTemplates\EmbeddedTemplate.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="RazorLight" Version="2.3.1" />
+  </ItemGroup>
+
+</Project>

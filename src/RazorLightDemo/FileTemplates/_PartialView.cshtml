@@ -1,0 +1,23 @@
+﻿@using RazorLight
+@inherits TemplatePage<RazorLightDemo.Model.Email>
+
+<p>This content is rendered from partial view</p>
+
+<table>
+    <tr>
+        <td>Name</td>
+        <td>@Model.Name</td>
+    </tr>
+    <tr>
+        <td>Identity No</td>
+        <td>@Model.IdentityNo</td>
+    </tr>
+    <tr>
+        <td>Email</td>
+        <td>@Model.EmailAddress</td>
+    </tr>
+    <tr>
+        <td>Phone No</td>
+        <td>@Model.PhoneNo</td>
+    </tr>
+</table>

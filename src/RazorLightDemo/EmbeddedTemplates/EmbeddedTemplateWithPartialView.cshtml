@@ -1,0 +1,22 @@
+﻿@using RazorLight
+@inherits TemplatePage<RazorLightDemo.Model.Email>
+
+
+<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="content-type" content="text/html" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello @Model.Name</title>
+</head>
+<body style="font-family: Lato, sans-serif; color: #000000;">
+    <p>This is embedded template with partial view</p>
+    <p>Hello, @Model.Name</p>
+    <div>Below are your registration details. Please verify.</div>
+    @{
+        await IncludeAsync("_PartialView.cshtml", Model);
+     }
+</body>
+</html>
